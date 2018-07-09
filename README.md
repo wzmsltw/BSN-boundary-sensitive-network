@@ -7,7 +7,6 @@ This repo holds the codes of paper: "BSN: Boundary Sensitive Network for Tempora
 # Update
 
 * 2018.07.09: Codes and feature of BSN
-
 * 2018.07.02: Repository for BSN
 
 
@@ -65,6 +64,12 @@ We also provide trained TEM model in `./model/TEM` .
 
 
 #### 2. Testing of temporal evaluation module
+
+First, to create directories for outputs.
+
+```
+sh mkdir.sh
+```
 
 ```
 python TEM_test.py
