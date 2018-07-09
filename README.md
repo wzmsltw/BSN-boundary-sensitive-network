@@ -14,10 +14,10 @@ This repo holds the codes of paper: "BSN: Boundary Sensitive Network for Tempora
 # Contents
 
 * [Paper Introduction](#paper-introduction)
-* [Other Info](#other-info)
 * [Prerequisites](#prerequisites)
-* [Code and Data Preparation](#Code_and_Data_Preparation)
-* [Training and Testing  of BSN](#Training_and_Testing_of_BSN)
+* [Code and Data Preparation](#code_and_data_preparation)
+* [Training and Testing  of BSN](#training_and_testing_of_bsn)
+* [Other Info](#other-info)
 
 # Paper Introduction
 
