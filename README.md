@@ -118,7 +118,7 @@ python eval.py
 ## Citation
 
 
-Please cite the following paper if you feel SSN useful to your research
+Please cite the following paper if you feel BSN useful to your research
 
 ```
 @inproceedings{BSN2018arXiv,
