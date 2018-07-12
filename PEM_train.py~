@@ -96,7 +96,7 @@ if __name__ == "__main__":
     Y_iou=tf.placeholder(tf.float32,[None])
     LR= tf.placeholder(tf.float32)
     
-    optimizer,loss=PEM_Train(X_feature,Y_iou,LR,config)
+    latent_optimizer,loss=PEM_Train(X_feature,Y_iou,LR,config)
     
     model_saver=tf.train.Saver(var_list=tf.trainable_variables(),max_to_keep=80)
     tf_config = tf.ConfigProto()
@@ -122,7 +122,7 @@ if __name__ == "__main__":
         for idx in range(len(train_data)):
             prop_dict=train_data[idx]
             batch_feature,batch_iou_list,batch_ioa_list=PEM_load_data.prop_dict_data(prop_dict)
-            _,out_loss=sess.run([optimizer,loss],feed_dict={X_feature:batch_feature,
+            _,out_loss,out_alpha=sess.run([latent_optimizer,loss,config.alpha],feed_dict={X_feature:batch_feature,
                                                               Y_iou:batch_iou_list,
                                                               LR:config.learning_rates[epoch]})  
             mini_info["iou_loss"].append(out_loss["iou_loss"])
