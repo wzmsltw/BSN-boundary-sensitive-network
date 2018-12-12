@@ -1,11 +1,12 @@
 # BSN-boundary-sensitive-network
 
-This repo holds the codes of paper: "BSN: Boundary Sensitive Network for Temporal Action Proposal Generation", which is accepted in ECCV 2018.
+This repo holds the codes of paper: "BSN: Boundary Sensitive Network for Temporal Action Proposal Generation", which is accepted in ECCV 2018. You can also find pytorch-version implementation in [[BSN.pytorch]](https://github.com/wzmsltw/BSN-boundary-sensitive-network.pytorch).
 
 [[Arxiv Preprint]](http://arxiv.org/abs/1806.02964)
 
 # Update
 
+* 2018.12.12: Release Pytorch-version BSN
 * 2018.09.26: Previously, we adopted classification results from result files of "Uts at activitynet 2016" for action detection experiments. Recently we found that the classification accuracy of these results are unexpected high. Thus we replace it with classification results of "cuhk & ethz & siat submission to activitynet challenge 2017" and updated all related experiments accordingly. You can find updated papers in my [homepage](wzmsltw.github.io) and in arXiv.
 * 2018.07.09: Codes and feature of BSN
 * 2018.07.02: Repository for BSN
@@ -51,7 +52,7 @@ We support experiments with publicly available dataset ActivityNet 1.3 for tempo
 
 To extract visual feature, we adopt TSN model pretrained on the training set of ActivityNet, which is the challenge solution of CUHK&ETH&SIAT team in ActivityNet challenge 2016. Please refer this repo [TSN-yjxiong](https://github.com/yjxiong/temporal-segment-networks) to extract frames and optical flow and refer this repo [anet2016-cuhk](https://github.com/yjxiong/anet2016-cuhk) to find pretrained TSN model.
 
-For convenience of training and testing, we rescale the feature length of all videos to same length 100, and we provide the rescaled feature at here [Google Cloud](https://drive.google.com/file/d/1ISemndlSDS2FtqQOKL0t3Cjj9yk2yznF/view?usp=sharing) or [Baidu Yun](https://pan.baidu.com/s/19GI3_-uZbd_XynUO6g-8YQ). If you download features from BaiduYun, please use `cat zip_csv_mean_100.z* > csv_mean_100.zip` before unzip. After download and unzip, please put `csv_mean_100` directory to `./data/activitynet_feature_cuhk/` . 
+For convenience of training and testing, we rescale the feature length of all videos to same length 100, and we provide the rescaled feature at here [Google Cloud](https://drive.google.com/file/d/1ISemndlSDS2FtqQOKL0t3Cjj9yk2yznF/view?usp=sharing) or [Baidu Yun](https://pan.baidu.com/s/19GI3_-uZbd_XynUO6g-8YQ). If you download features from BaiduYun, please use `cat zip_csv_mean_100.z* > csv_mean_100.zip` before unzip. After download and unzip, please put `csv_mean_100` directory to `./data/activitynet_feature_cuhk/` .
 
 # Training and Testing  of BSN
 
@@ -140,4 +141,3 @@ For any question, please file an issue or contact
 ```
 Tianwei Lin: wzmsltw@sjtu.edu.cn
 ```
-
